@@ -1,0 +1,19 @@
+path = 'Lab_3./example.txt'
+
+def func(path, method):
+    if method == 'целиком':
+        with open(path, 'r') as file:
+            content = file.read()
+        return content
+
+    elif method == 'построчно':
+        with open(path, 'r') as file:
+                return file.readlines()
+
+    else:
+        return('Ошибка!')
+        
+        
+
+method = input('Какой формат чтения вы хотите выбрать?\nчтение целиком или построчно?: ')
+print(func(path, method))
